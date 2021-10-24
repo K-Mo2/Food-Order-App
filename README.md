@@ -24,7 +24,7 @@ The web app is very simple and easy to use.
 
 # Objectives
 
-The web app was built as a practice for React.js with some archetictural guidance only, the coding is was done mostly by me, with some searching of course for bug fixes and solutions.
+The web app was built as a practice for React.js with some architectural guidance only, the coding is was done mostly by me, with some searching of course for bug fixes and solutions.
 
 # Note
 
