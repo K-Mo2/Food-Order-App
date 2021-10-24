@@ -24,7 +24,6 @@ const AvailableMeals = () => {
           price: data[key].price,
         });
       }
-      console.log(dataArr);
       setMeals(dataArr);
       setIsLoading(false);
     };
