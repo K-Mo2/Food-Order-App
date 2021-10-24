@@ -39,6 +39,16 @@ const Cart = (props) => {
   const orderBtnHandeler = (event) => {
     setOrderBtnClicked(true);
   };
+
+  const confirmOrderHandler = (userData) => {
+    fetch("https://fir-72c12-default-rtdb.firebaseio.com/orders.json", {
+      method: "POST",
+      body: JSON.stringify({
+        user: userData,
+        orderedItems: cartCtx.items,
+      }),
+    });
+  };
   const cartBtns = (
     <div className={classes.actions}>
       <button className={classes["button--alt"]} onClick={props.onClose}>
@@ -58,7 +68,9 @@ const Cart = (props) => {
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
-      {orderBtnClicked && <Checkout onCancel={props.onClose} />}
+      {orderBtnClicked && (
+        <Checkout onConfirm={confirmOrderHandler} onCancel={props.onClose} />
+      )}
       {!orderBtnClicked && cartBtns}
     </Modal>
   );
