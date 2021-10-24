@@ -28,6 +28,7 @@ const Checkout = (props) => {
     setCityState("");
     setFormIsValid("");
     setFormIsValid(true);
+
     props.onConfirm({
       name: nameState,
       street: streetState,
@@ -91,6 +92,11 @@ const Checkout = (props) => {
         />
       </div>
       {!formIsValid && <h5>Invalid input, please try a valid input</h5>}
+      {formIsValid && (
+        <h5>
+          Successful Request, Your order has been sent received successfully
+        </h5>
+      )}
       <div className={classes.actions}>
         <button type="button" onClick={props.onCancel}>
           Cancel
