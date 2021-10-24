@@ -15,9 +15,12 @@ The data provided by the user is stored in Firebase including the delivery infor
 The web app is very simple and easy to use.
 
 1- clone the repo on your local machine
+
 2- open the terminal in package.json directory
-2- run npm install to install the packages
-3- run npm start to start the app
+
+3- run npm install to install the packages
+
+4- run npm start to start the app
 
 # Objectives
 
