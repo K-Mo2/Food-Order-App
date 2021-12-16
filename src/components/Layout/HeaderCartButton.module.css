@@ -1,11 +1,11 @@
 .button {
+  display: flex;
   cursor: pointer;
   font: inherit;
   border: none;
-  background-color: #4d1601;
+  background-color: #db0339;
   color: white;
   padding: 0.75rem 3rem;
-  display: flex;
   justify-content: space-around;
   align-items: center;
   border-radius: 25px;
@@ -14,7 +14,7 @@
 
 .button:hover,
 .button:active {
-  background-color: #2c0d00;
+  background-color: #ff2e63;
 }
 
 .icon {
@@ -24,7 +24,7 @@
 }
 
 .badge {
-  background-color: #b94517;
+  background-color: #252a34;
   padding: 0.25rem 1rem;
   border-radius: 25px;
   margin-left: 1rem;
@@ -33,7 +33,7 @@
 
 .button:hover .badge,
 .button:active .badge {
-  background-color: #92320c;
+  background-color: #565b68;
 }
 
 .bump {
@@ -55,5 +55,21 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1vh 2vw;
+    margin-left: 3vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .badge {
+    margin: auto 2vw;
+    margin-right: 0;
+    padding: 1vh 4vw;
   }
 }

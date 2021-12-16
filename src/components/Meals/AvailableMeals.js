@@ -9,9 +9,7 @@ const AvailableMeals = () => {
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch(
-        "https://fir-72c12-default-rtdb.firebaseio.com/meals.json"
-      );
+      const response = await fetch(`${process.env.REACT_APP_FIREBASE_GET}`);
 
       const data = await response.json();
       const dataArr = [];

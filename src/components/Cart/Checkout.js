@@ -1,8 +1,6 @@
 import classes from "./Checkout.module.css";
 import { useState } from "react";
 
-const inputIsValid = (value) => value.trim() !== "";
-
 const Checkout = (props) => {
   const [nameState, setNameState] = useState("");
   const [streetState, setStreetState] = useState("");
@@ -11,22 +9,24 @@ const Checkout = (props) => {
   const [formIsValid, setFormIsValid] = useState(true);
   const dataArr = [nameState, streetState, postalState, cityState];
 
-  const confirmHandler = (event) => {
-    event.preventDefault();
-    const validation = dataArr.every((el) => inputIsValid(el));
-    console.log(dataArr);
-    console.log(validation);
+  let submissionFlag = false;
 
+  const confirmHandler = (event) => {
+    submissionFlag = true;
+
+    event.preventDefault();
+
+    const validation = dataArr.every((el) => el.trim() !== "");
+    console.log(validation);
     if (!validation) {
       setFormIsValid(false);
       return;
     }
-
+    console.log(dataArr);
     setNameState("");
     setStreetState("");
     setPostalState("");
     setCityState("");
-    setFormIsValid("");
     setFormIsValid(true);
 
     props.onConfirm({
@@ -91,10 +91,14 @@ const Checkout = (props) => {
           value={cityState}
         />
       </div>
-      {!formIsValid && <h5>Invalid input, please try a valid input</h5>}
-      {formIsValid && (
-        <h5>
-          Successful Request, Your order has been sent received successfully
+      {!formIsValid && (
+        <h5 style={{ color: "red" }}>
+          Invalid input, please try a valid input
+        </h5>
+      )}
+      {submissionFlag && formIsValid && (
+        <h5 style={{ color: "green" }}>
+          Successful Request, Your order has been sent successfully
         </h5>
       )}
       <div className={classes.actions}>

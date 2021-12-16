@@ -41,7 +41,7 @@ const Cart = (props) => {
   };
 
   const confirmOrderHandler = (userData) => {
-    fetch("https://fir-72c12-default-rtdb.firebaseio.com/orders.json", {
+    fetch(`${process.env.REACT_APP_FIREBASE_POST}`, {
       method: "POST",
       body: JSON.stringify({
         user: userData,
