@@ -10,7 +10,16 @@ The user only needs to provide the app with their location and some presonal inf
 
 The data provided by the user is stored in Firebase including the delivery information and also the details of their order.
 
+
 # Instructions
+
+1- Add whichever the dishes you like and as much dishes as you want.
+
+2- Click on the top right button called "Your Cart" to view your order and the total price.
+
+3- Click on order button, then provide your information for the delivery, after that click on the confirm button to confirm your order.
+
+## launch method
 
 The web app is very simple and easy to use.
 
