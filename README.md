@@ -4,9 +4,9 @@ React web app for ordering food
 
 The application represents a menu of dishes with the price of each one.
 
-It allows the user to order whichever the dishes they like in addition to the amount they want od each dish.
+It allows the user to order whichever the dishes they like in addition to the amount they want of each dish.
 
-The user only needs to provide the app with their location and some presonal info to be able to reach them.
+The user only needs to provide the app with their location and some presonal information to be able to reach them.
 
 The data provided by the user is stored in Firebase including the delivery information and also the details of their order.
 
@@ -14,13 +14,15 @@ The data provided by the user is stored in Firebase including the delivery infor
 
 The web app is very simple and easy to use.
 
-1- clone the repo on your local machine
+- Run the following commands in your terminal:
 
-2- open the terminal in package.json directory
+```
+git clone https://github.com/K-Mo2/Food-Order-App
 
-3- run npm install to install the packages
+npm install
 
-4- run npm start to start the app
+npm start
+```
 
 # Objectives
 
@@ -29,4 +31,4 @@ The web app was built as a practice for React.js with some architectural guidanc
 # Note
 
 This is project was just practice porject, so constructive criticism, advices, suggestions
-and pull requests are more than welceom.
+and pull requests are more than welcome.
